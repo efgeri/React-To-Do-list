@@ -44,9 +44,9 @@ function App() {
     <div className="App">
       <h1>To Do List</h1>
       <ul>
-        {toDoItems.map((item) => {
+        {toDoItems.map((item, index) => {
           return (
-            <li className={item.priority==='high' ? 'high-priority' : 'low-priority' }>
+            <li key={index} className={item.priority==='high' ? 'high-priority' : 'low-priority' }>
               <h3>{item.name}</h3>
             </li>
           );
